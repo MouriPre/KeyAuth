@@ -1,3 +1,21 @@
-local KeyAuth = loadstring([[
-084b724933dfa2e6dbd20fd615fea58e
-]])()
+-- Đây là nội dung cần có trong file KeyAuthAPI của bạn
+return {
+    new = function(name, ownerid, secret, version)
+        local self = {}
+        
+        function self:init()
+            -- Code khởi tạo
+        end
+        
+        function self:login(key)
+            -- Code xác thực key
+            -- Có thể dùng key bạn đã set: 084b724933dfa2e6dbd20fd615fea58e
+            if key == "084b724933dfa2e6dbd20fd615fea58e" then
+                return true
+            end
+            return false
+        end
+        
+        return self
+    end
+}
